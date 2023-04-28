@@ -21,8 +21,10 @@ class _PageFourState extends State<PageFour> {
           Container(
             margin: const EdgeInsets.all(10),
             child: FloatingActionButton(
+              backgroundColor: Colors.black87,
+              foregroundColor: Colors.blue[200],
               onPressed: () {
-                Navigator.pop(context);
+                Navigator.pushNamed(context, 'pagethird');
                 // Navigator.push(context,
                 //     MaterialPageRoute(builder: ((context) => const PageThird())));
               },
@@ -32,8 +34,10 @@ class _PageFourState extends State<PageFour> {
           Container(
             margin: const EdgeInsets.all(10),
             child: FloatingActionButton(
+              backgroundColor: Colors.black87,
+              foregroundColor: Colors.blue[200],
               onPressed: () {
-                Navigator.pushNamed(context, 'pagethird');
+                Navigator.pushNamed(context, 'pagefive');
                 // Navigator.push(context,
                 //     MaterialPageRoute(builder: ((context) => const PageTwo())));
               },

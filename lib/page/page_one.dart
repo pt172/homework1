@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'package:homework1/page/page_two.dart';
 
 class PageOne extends StatefulWidget {
@@ -15,20 +16,13 @@ class _PageOneState extends State<PageOne> {
     return Scaffold(
       floatingActionButton: Wrap(
         direction: Axis.horizontal,
-        children: [
-          // Container(
-          //   margin: const EdgeInsets.all(10),
-          //   child: FloatingActionButton(
-          //     onPressed: () {
-          //       Navigator.push(context,
-          //           MaterialPageRoute(builder: ((context) => const PageTwo())));
-          //     },
-          //     child: const Icon(Icons.keyboard_arrow_left),
-          //   ),
-          // ),
+        children: <Widget>[
+          // dòng này có nghĩa gì?
           Container(
             margin: const EdgeInsets.all(10),
             child: FloatingActionButton(
+              backgroundColor: Colors.black87,
+              foregroundColor: Colors.blue[200],
               onPressed: () {
                 Navigator.pushNamed(context, 'pagetwo');
                 // Navigator.push(context,
@@ -45,9 +39,6 @@ class _PageOneState extends State<PageOne> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            // const SizedBox(
-            //   height: 100,
-            // ),
             Container(
               height: 100,
               width: 90,

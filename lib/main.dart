@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homework1/page/page_five.dart';
 import 'package:homework1/page/page_four.dart';
 import 'package:homework1/page/page_one.dart';
 import 'package:homework1/page/page_third.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         'pagetwo': (context) => const PageTwo(),
         'pagethird': (context) => const PageThird(),
         'pagefour': (context) => const PageFour(),
+        'pagefive': (context) => const PageFive(),
       },
     );
   }

@@ -19,6 +19,8 @@ class _PageTwoState extends State<PageTwo> {
           Container(
             margin: const EdgeInsets.all(10),
             child: FloatingActionButton(
+              backgroundColor: Colors.black87,
+              foregroundColor: Colors.blue[200],
               onPressed: () {
                 Navigator.pushNamed(context, 'pageone');
                 // Navigator.push(context,
@@ -30,6 +32,8 @@ class _PageTwoState extends State<PageTwo> {
           Container(
             margin: const EdgeInsets.all(10),
             child: FloatingActionButton(
+              backgroundColor: Colors.black87,
+              foregroundColor: Colors.blue[200],
               onPressed: () {
                 Navigator.pushNamed(context, 'pagethird');
                 // Navigator.push(context,
