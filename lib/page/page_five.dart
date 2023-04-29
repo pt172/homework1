@@ -13,33 +13,25 @@ class _PageFiveState extends State<PageFive> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.black87,
-        foregroundColor: Colors.blue[200],
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
         onPressed: () {
           Navigator.pop(context);
           // Navigator.push(context,
           //     MaterialPageRoute(builder: ((context) => const PageTwo())));
         },
-        child: const Icon(Icons.keyboard_arrow_right),
+        child: const Icon(Icons.play_arrow),
       ),
       backgroundColor: Colors.white,
       body: Stack(alignment: Alignment.center, children: [
-        Positioned(
-            left: 50,
-            top: 100,
-            child: Container(
-              color: Colors.black26,
-              width: 200,
-              height: 200,
-            )),
         Center(
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Expanded(
+                flex: 1,
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Expanded(
                       child: Row(
@@ -77,11 +69,12 @@ class _PageFiveState extends State<PageFive> {
                             ],
                           ),
                           Expanded(
+                            flex: 2,
                             child: Column(
                               children: [
                                 Expanded(
                                   child: Container(
-                                    width: 69,
+                                    width: double.infinity,
                                     height: 100,
                                     color: Colors.blue,
                                   ),
@@ -89,13 +82,15 @@ class _PageFiveState extends State<PageFive> {
                                 Row(
                                   children: [
                                     Expanded(
+                                      flex: 1,
                                       child: Container(
                                         width: 35,
                                         height: 35,
-                                        color: Colors.green,
+                                        color: Colors.green[300],
                                       ),
                                     ),
                                     Expanded(
+                                      flex: 1,
                                       child: Container(
                                         height: 35,
                                         width: 35,
@@ -114,17 +109,17 @@ class _PageFiveState extends State<PageFive> {
                       height: 190,
                       width: 100,
                       color: Colors.black,
-                    ),
+                    ), //ô2
                     Container(
                       height: 190,
                       width: 100,
                       color: Colors.yellow,
-                    ),
+                    ), //ô3
                     Container(
                       height: 190,
                       width: 100,
                       color: Colors.white,
-                    ),
+                    ), //ô4
                   ],
                 ),
               ),
@@ -139,14 +134,31 @@ class _PageFiveState extends State<PageFive> {
               const SizedBox(
                 width: 10,
               ),
-              Container(
-                height: 100,
-                width: 90,
-                color: Colors.pinkAccent[400],
+              Expanded(
+                flex: 1,
+                child: Container(
+                  height: 100,
+                  width: 90,
+                  color: Colors.pinkAccent[400],
+                ),
               ),
             ],
           ),
         ),
+        Positioned(
+            left: 60,
+            top: 340,
+            child: Container(
+              color: Colors.black38,
+              width: 170,
+              height: 160,
+              child: const Center(
+                child: Text(
+                  'Ô xếp chồng',
+                  style: TextStyle(color: Colors.blue, fontSize: 25),
+                ),
+              ),
+            )),
       ]),
     );
   }
