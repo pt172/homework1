@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:homework1/page/page_five.dart';
 import 'package:homework1/page/page_four.dart';
 import 'package:homework1/page/page_one.dart';
+import 'package:homework1/page/page_six.dart';
 import 'package:homework1/page/page_third.dart';
 import 'package:homework1/page/page_two.dart';
 
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       initialRoute: 'pageone',
       routes: {
         'pageone': (context) => const PageOne(),
@@ -22,6 +24,7 @@ class MyApp extends StatelessWidget {
         'pagethird': (context) => const PageThird(),
         'pagefour': (context) => const PageFour(),
         'pagefive': (context) => const PageFive(),
+        'pagesix': (context) => const PageSix(),
       },
     );
   }
