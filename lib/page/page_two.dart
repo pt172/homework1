@@ -19,6 +19,7 @@ class _PageTwoState extends State<PageTwo> {
           Container(
             margin: const EdgeInsets.all(10),
             child: FloatingActionButton(
+              heroTag: "btn1",
               backgroundColor: Colors.black87,
               foregroundColor: Colors.blue[200],
               onPressed: () {
@@ -32,6 +33,7 @@ class _PageTwoState extends State<PageTwo> {
           Container(
             margin: const EdgeInsets.all(10),
             child: FloatingActionButton(
+              heroTag: "btn2",
               backgroundColor: Colors.black87,
               foregroundColor: Colors.blue[200],
               onPressed: () {
@@ -50,30 +52,39 @@ class _PageTwoState extends State<PageTwo> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Container(
-              height: 110,
-              color: Colors.blue[200],
+            ...List.generate(
+              6,
+              (index) => Expanded(
+                child: Container(
+                  margin: EdgeInsets.only(top: index != 0 ? 10 : 0),
+                  color: Colors.blue,
+                ),
+              ),
             ),
-            Container(
-              height: 110,
-              color: Colors.blue[200],
-            ),
-            Container(
-              height: 110,
-              color: Colors.blue[200],
-            ),
-            Container(
-              height: 110,
-              color: Colors.blue[200],
-            ),
-            Container(
-              height: 110,
-              color: Colors.blue[200],
-            ),
-            Container(
-              height: 110,
-              color: Colors.blue[200],
-            ),
+            // Container(
+            //   height: 110,
+            //   color: Colors.blue[200],
+            // ),
+            // Container(
+            //   height: 110,
+            //   color: Colors.blue[200],
+            // ),
+            // Container(
+            //   height: 110,
+            //   color: Colors.blue[200],
+            // ),
+            // Container(
+            //   height: 110,
+            //   color: Colors.blue[200],
+            // ),
+            // Container(
+            //   height: 110,
+            //   color: Colors.blue[200],
+            // ),
+            // Container(
+            //   height: 110,
+            //   color: Colors.blue[200],
+            // ),
           ],
         ),
       ),
