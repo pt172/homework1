@@ -26,64 +26,93 @@ class _PageThirdState extends State<PageThird> {
             ));
 
     return Scaffold(
-      floatingActionButton: Wrap(
-        spacing: 220,
-        direction: Axis.horizontal,
-        children: [
-          Container(
-            margin: const EdgeInsets.all(10),
-            child: FloatingActionButton(
-              backgroundColor: Colors.black87,
-              foregroundColor: Colors.blue[200],
-              onPressed: () {
-                Navigator.pushNamed(context, 'pagetwo');
-                // Navigator.push(context,
-                //     MaterialPageRoute(builder: ((context) => const PageThird())));
-              },
-              child: const Icon(Icons.keyboard_arrow_left),
+        floatingActionButton: Wrap(
+          spacing: 220,
+          direction: Axis.horizontal,
+          children: [
+            Container(
+              margin: const EdgeInsets.all(10),
+              child: FloatingActionButton(
+                heroTag: "btn1",
+                backgroundColor: Colors.black87,
+                foregroundColor: Colors.blue[200],
+                onPressed: () {
+                  Navigator.pushNamed(context, 'pagetwo');
+                  // Navigator.push(context,
+                  //     MaterialPageRoute(builder: ((context) => const PageThird())));
+                },
+                child: const Icon(Icons.keyboard_arrow_left),
+              ),
             ),
-          ),
-          Container(
-            margin: const EdgeInsets.all(10),
-            child: FloatingActionButton(
-              backgroundColor: Colors.black87,
-              foregroundColor: Colors.blue[200],
-              onPressed: () {
-                Navigator.pushNamed(context, 'pagefour');
-                // Navigator.push(context,
-                //     MaterialPageRoute(builder: ((context) => const PageTwo())));
-              },
-              child: const Icon(Icons.keyboard_arrow_right),
+            Container(
+              margin: const EdgeInsets.all(10),
+              child: FloatingActionButton(
+                heroTag: "btn2",
+                backgroundColor: Colors.black87,
+                foregroundColor: Colors.blue[200],
+                onPressed: () {
+                  Navigator.pushNamed(context, 'pagefour');
+                  // Navigator.push(context,
+                  //     MaterialPageRoute(builder: ((context) => const PageTwo())));
+                },
+                child: const Icon(Icons.keyboard_arrow_right),
+              ),
             ),
+          ],
+        ),
+        backgroundColor: Colors.white,
+        body: SafeArea(
+          child: Row(
+            children: [
+              ...List.generate(
+                4,
+                (index) => Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.only(left: index != 0 ? 10 : 0),
+                    child: Column(
+                      children: [
+                        ...List.generate(
+                          8,
+                          (index) => Expanded(
+                            child: Container(
+                              margin: EdgeInsets.only(top: index != 0 ? 10 : 0),
+                              color: Colors.blue,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
-        ],
-      ),
-      backgroundColor: Colors.white,
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: list,
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: list,
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: list,
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: list,
-          ),
-        ],
-      ),
-    );
+        )
+        // Row(
+        //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //   children: [
+        //     Column(
+        //       crossAxisAlignment: CrossAxisAlignment.start,
+        //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //       children: list,
+        //     ),
+        //     Column(
+        //       crossAxisAlignment: CrossAxisAlignment.start,
+        //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //       children: list,
+        //     ),
+        //     Column(
+        //       crossAxisAlignment: CrossAxisAlignment.start,
+        //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //       children: list,
+        //     ),
+        //     Column(
+        //       crossAxisAlignment: CrossAxisAlignment.start,
+        //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //       children: list,
+        //     ),
+        //   ],
+        // ),
+        );
   }
 }

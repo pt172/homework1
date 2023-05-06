@@ -16,9 +16,10 @@ class _PageFiveState extends State<PageFive> {
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
         onPressed: () {
-          Navigator.pop(context);
+          // Navigator.pop(context);
           // Navigator.push(context,
           //     MaterialPageRoute(builder: ((context) => const PageTwo())));
+          Navigator.pushNamed(context, 'pagesix');
         },
         child: const Icon(Icons.play_arrow),
       ),

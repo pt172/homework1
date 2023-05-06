@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'package:homework1/page/page_two.dart';
+import 'package:homework1/widgets/chat_item.dart';
 
 class PageSix extends StatefulWidget {
   static const name = '/pagesix';
@@ -19,16 +20,25 @@ class _PageSixState extends State<PageSix> {
           padding: const EdgeInsets.all(10.0),
           child: Column(children: [
             Wrap(spacing: 300, direction: Axis.horizontal, children: [
-              FloatingActionButton(
-                backgroundColor: Colors.blueGrey[900],
+              IconButton(
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: const Icon(
+                icon: const Icon(
                   Icons.arrow_back,
                   color: Colors.white,
                 ),
               ),
+              // FloatingActionButton(
+              //   backgroundColor: Colors.blueGrey[900],
+              //   onPressed: () {
+              //     Navigator.pop(context);
+              //   },
+              //   child: const Icon(
+              //     Icons.arrow_back,
+              //     color: Colors.white,
+              //   ),
+              // ),
               const Icon(
                 size: 35,
                 Icons.add,
@@ -268,85 +278,62 @@ class _PageSixState extends State<PageSix> {
               child: SingleChildScrollView(
                 scrollDirection: Axis.vertical,
                 child: Column(children: [
-                  Row(children: [
-                    Container(
-                      width: 90,
-                      height: 90,
-                      margin: const EdgeInsets.all(10),
-                      decoration: const BoxDecoration(
-                          shape: BoxShape.circle, color: Colors.pink),
-                      child: const ClipOval(
-                          child: Image(
-                        image: NetworkImage(
-                            'https://yt3.googleusercontent.com/ytc/AGIKgqMsnpOSAse4uNrhjzOtzttSPyYsY0ELnfNhpj2D=s900-c-k-c0x00ffffff-no-rj'),
-                      )),
-                    ),
-                    const Expanded(
-                      child: Center(
-                        child: ListTile(
-                          title: Text(
-                            'Mickey',
-                            style: TextStyle(
-                              fontSize: 25,
-                              color: Colors.white,
-                            ),
-                          ),
-                          subtitle: Text('Hey! How\'s it going?',
-                              style:
-                                  TextStyle(fontSize: 20, color: Colors.white)),
-                        ),
-                      ),
-                    ),
-                    Container(
-                        alignment: Alignment.topLeft,
-                        child: const Text(
-                          '9:00 AM',
-                          style: TextStyle(color: Colors.white),
-                        ))
-                  ]),
+                  const ChatItem(
+                    avatar:
+                        'https://yt3.googleusercontent.com/ytc/AGIKgqMsnpOSAse4uNrhjzOtzttSPyYsY0ELnfNhpj2D=s900-c-k-c0x00ffffff-no-rj',
+                    name: 'Ngo Khong',
+                    msg: 'Hello',
+                    time: '9:00 AM',
+                  ),
                   const Divider(
                     height: 1,
                     color: Colors.black54,
                     thickness: 1,
                     indent: 110,
                   ),
-                  Row(children: [
-                    Container(
-                      width: 90,
-                      height: 90,
-                      margin: const EdgeInsets.all(10),
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                      ),
-                      child: const ClipOval(
-                          child: Image(
-                        image: NetworkImage(
-                            'https://www.stickerforwall.com/25445-thickbox/stickers-and-vinyl-donald-duck-english-6366.jpg'),
-                      )),
-                    ),
-                    const Expanded(
-                      child: Center(
-                        child: ListTile(
-                          title: Text(
-                            'Donal',
-                            style: TextStyle(
-                              fontSize: 25,
-                              color: Colors.white,
-                            ),
-                          ),
-                          subtitle: Text('What kind of music do you like?',
-                              style:
-                                  TextStyle(fontSize: 20, color: Colors.white)),
-                        ),
-                      ),
-                    ),
-                    Container(
-                        alignment: Alignment.topLeft,
-                        child: const Text(
-                          '8:00 AM',
-                          style: TextStyle(color: Colors.white),
-                        ))
-                  ]),
+                  const ChatItem(
+                      avatar:
+                          'https://www.stickerforwall.com/25445-thickbox/stickers-and-vinyl-donald-duck-english-6366.jpg',
+                      name: 'Donal',
+                      msg: 'What kind of music do you like?',
+                      time: '8:00 AM'),
+                  // Row(children: [
+                  //   Container(
+                  //     width: 90,
+                  //     height: 90,
+                  //     margin: const EdgeInsets.all(10),
+                  //     decoration: const BoxDecoration(
+                  //       shape: BoxShape.circle,
+                  //     ),
+                  //     child: const ClipOval(
+                  //         child: Image(
+                  //       image: NetworkImage(
+                  //           'https://www.stickerforwall.com/25445-thickbox/stickers-and-vinyl-donald-duck-english-6366.jpg'),
+                  //     )),
+                  //   ),
+                  //   const Expanded(
+                  //     child: Center(
+                  //       child: ListTile(
+                  //         title: Text(
+                  //           'Donal',
+                  //           style: TextStyle(
+                  //             fontSize: 25,
+                  //             color: Colors.white,
+                  //           ),
+                  //         ),
+                  //         subtitle: Text('What kind of music do you like?',
+                  //             style:
+                  //                 TextStyle(fontSize: 20, color: Colors.white)),
+                  //       ),
+                  //     ),
+                  //   ),
+                  //   Container(
+                  //       alignment: Alignment.topLeft,
+                  //       child: const Text(
+                  //         '8:00 AM',
+                  //         style: TextStyle(color: Colors.white),
+                  //       ))
+                  // ]),
                   const Divider(
                     height: 1,
                     color: Colors.black54,

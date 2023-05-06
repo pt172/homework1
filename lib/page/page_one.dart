@@ -39,26 +39,35 @@ class _PageOneState extends State<PageOne> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            Container(
-              height: 100,
-              width: 90,
-              color: Colors.blue[200],
+            ...List.generate(
+              4,
+              (index) => Expanded(
+                child: Container(
+                  margin: EdgeInsets.only(left: index != 0 ? 10 : 0),
+                  color: Colors.blue,
+                ),
+              ),
             ),
-            Container(
-              height: 100,
-              width: 90,
-              color: Colors.blue[200],
-            ),
-            Container(
-              height: 100,
-              width: 90,
-              color: Colors.blue[200],
-            ),
-            Container(
-              height: 100,
-              width: 90,
-              color: Colors.blue[200],
-            )
+            // Container(
+            //   height: 100,
+            //   width: 90,
+            //   color: Colors.blue[200],
+            // ),
+            // Container(
+            //   height: 100,
+            //   width: 90,
+            //   color: Colors.blue[200],
+            // ),
+            // Container(
+            //   height: 100,
+            //   width: 90,
+            //   color: Colors.blue[200],
+            // ),
+            // Container(
+            //   height: 100,
+            //   width: 90,
+            //   color: Colors.blue[200],
+            // )
           ],
         ),
       ),
