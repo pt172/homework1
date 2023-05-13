@@ -6,19 +6,21 @@ class ChatItem extends StatefulWidget {
     required this.avatar,
     required this.name,
     required this.msg,
+    required this.followed,
+    required this.onPressed,
   }) : super(key: key);
 
   final String avatar;
   final String name;
   final String msg;
+  final bool followed;
+  final void Function()? onPressed;
 
   @override
   State<ChatItem> createState() => _ChatItemState();
 }
 
 class _ChatItemState extends State<ChatItem> {
-  String nameBtn = 'Follow';
-  Color colorBtn = Colors.blue;
   int number = 0;
 
   @override
@@ -52,30 +54,17 @@ class _ChatItemState extends State<ChatItem> {
         ),
       ),
       InkWell(
-          onTap: () {
-            if (nameBtn == 'Follow') {
-              nameBtn = 'Unfollow';
-              colorBtn = Colors.black38;
-              number++;
-
-              setState(() {});
-            } else {
-              nameBtn = 'Follow';
-              colorBtn = Colors.blue[600]!;
-              number--;
-
-              setState(() {});
-            }
-          },
+          onTap: widget.onPressed,
           child: Container(
             margin: const EdgeInsets.all(7),
             width: 90,
             height: 40,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25), color: colorBtn),
+                borderRadius: BorderRadius.circular(25),
+                color: widget.followed ? Colors.red : Colors.blue),
             child: Center(
               child: Text(
-                nameBtn,
+                widget.followed ? 'Unfollow' : 'Follow',
                 style: const TextStyle(color: Colors.white),
               ),
             ),
