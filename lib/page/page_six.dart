@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
 import 'package:homework1/widgets/ava_item.dart';
-=======
-// ignore: unused_import
-import 'package:homework1/page/page_two.dart';
->>>>>>> 02fe6f3d4e3520e7d95bf270005d7a0a05f7d688
 import 'package:homework1/widgets/chat_item.dart';
 
 class PageSix extends StatefulWidget {
@@ -23,25 +18,17 @@ class _PageSixState extends State<PageSix> {
         body: Padding(
           padding: const EdgeInsets.all(1.0),
           child: Column(children: [
-<<<<<<< HEAD
             Wrap(spacing: 290, direction: Axis.horizontal, children: [
-=======
-            Wrap(spacing: 300, direction: Axis.horizontal, children: [
->>>>>>> 02fe6f3d4e3520e7d95bf270005d7a0a05f7d688
               IconButton(
                 onPressed: () {
                   Navigator.pop(context);
                 },
                 icon: const Icon(
-<<<<<<< HEAD
                   size: 35,
-=======
->>>>>>> 02fe6f3d4e3520e7d95bf270005d7a0a05f7d688
                   Icons.arrow_back,
                   color: Colors.white,
                 ),
               ),
-<<<<<<< HEAD
               IconButton(
                 onPressed: () {
                   Navigator.pushNamed(context, 'pageseven');
@@ -51,22 +38,6 @@ class _PageSixState extends State<PageSix> {
                   Icons.add,
                   color: Colors.white,
                 ),
-=======
-              // FloatingActionButton(
-              //   backgroundColor: Colors.blueGrey[900],
-              //   onPressed: () {
-              //     Navigator.pop(context);
-              //   },
-              //   child: const Icon(
-              //     Icons.arrow_back,
-              //     color: Colors.white,
-              //   ),
-              // ),
-              const Icon(
-                size: 35,
-                Icons.add,
-                color: Colors.white,
->>>>>>> 02fe6f3d4e3520e7d95bf270005d7a0a05f7d688
               ),
             ]),
             Container(
@@ -117,7 +88,6 @@ class _PageSixState extends State<PageSix> {
             Expanded(
               child: SingleChildScrollView(
                 scrollDirection: Axis.vertical,
-<<<<<<< HEAD
                 child: Column(children: const [
                   ChatItem(
                     avatar:
@@ -127,23 +97,11 @@ class _PageSixState extends State<PageSix> {
                     time: '9:00 AM',
                   ),
                   Divider(
-=======
-                child: Column(children: [
-                  const ChatItem(
-                    avatar:
-                        'https://yt3.googleusercontent.com/ytc/AGIKgqMsnpOSAse4uNrhjzOtzttSPyYsY0ELnfNhpj2D=s900-c-k-c0x00ffffff-no-rj',
-                    name: 'Ngo Khong',
-                    msg: 'Hello',
-                    time: '9:00 AM',
-                  ),
-                  const Divider(
->>>>>>> 02fe6f3d4e3520e7d95bf270005d7a0a05f7d688
                     height: 1,
                     color: Colors.black54,
                     thickness: 1,
                     indent: 110,
                   ),
-<<<<<<< HEAD
                   ChatItem(
                       avatar:
                           'https://static.wikia.nocookie.net/thelastofus/images/d/d1/Part_I_Joel_infobox.png/revision/latest?cb=20230215182931',
@@ -151,52 +109,6 @@ class _PageSixState extends State<PageSix> {
                       msg: 'Don\'t leave me alone my child?',
                       time: '8:00 AM'),
                   Divider(
-=======
-                  const ChatItem(
-                      avatar:
-                          'https://www.stickerforwall.com/25445-thickbox/stickers-and-vinyl-donald-duck-english-6366.jpg',
-                      name: 'Donal',
-                      msg: 'What kind of music do you like?',
-                      time: '8:00 AM'),
-                  // Row(children: [
-                  //   Container(
-                  //     width: 90,
-                  //     height: 90,
-                  //     margin: const EdgeInsets.all(10),
-                  //     decoration: const BoxDecoration(
-                  //       shape: BoxShape.circle,
-                  //     ),
-                  //     child: const ClipOval(
-                  //         child: Image(
-                  //       image: NetworkImage(
-                  //           'https://www.stickerforwall.com/25445-thickbox/stickers-and-vinyl-donald-duck-english-6366.jpg'),
-                  //     )),
-                  //   ),
-                  //   const Expanded(
-                  //     child: Center(
-                  //       child: ListTile(
-                  //         title: Text(
-                  //           'Donal',
-                  //           style: TextStyle(
-                  //             fontSize: 25,
-                  //             color: Colors.white,
-                  //           ),
-                  //         ),
-                  //         subtitle: Text('What kind of music do you like?',
-                  //             style:
-                  //                 TextStyle(fontSize: 20, color: Colors.white)),
-                  //       ),
-                  //     ),
-                  //   ),
-                  //   Container(
-                  //       alignment: Alignment.topLeft,
-                  //       child: const Text(
-                  //         '8:00 AM',
-                  //         style: TextStyle(color: Colors.white),
-                  //       ))
-                  // ]),
-                  const Divider(
->>>>>>> 02fe6f3d4e3520e7d95bf270005d7a0a05f7d688
                     height: 1,
                     color: Colors.black54,
                     thickness: 1,
