@@ -19,6 +19,7 @@ class _PageTwoState extends State<PageTwo> {
           Container(
             margin: const EdgeInsets.all(10),
             child: FloatingActionButton(
+              heroTag: 'vetrang1',
               backgroundColor: Colors.black87,
               foregroundColor: Colors.blue[200],
               onPressed: () {
@@ -32,6 +33,7 @@ class _PageTwoState extends State<PageTwo> {
           Container(
             margin: const EdgeInsets.all(10),
             child: FloatingActionButton(
+              heroTag: 'toitrang3',
               backgroundColor: Colors.black87,
               foregroundColor: Colors.blue[200],
               onPressed: () {
@@ -45,37 +47,43 @@ class _PageTwoState extends State<PageTwo> {
         ],
       ),
       backgroundColor: Colors.white,
-      body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            Container(
-              height: 110,
-              color: Colors.blue[200],
-            ),
-            Container(
-              height: 110,
-              color: Colors.blue[200],
-            ),
-            Container(
-              height: 110,
-              color: Colors.blue[200],
-            ),
-            Container(
-              height: 110,
-              color: Colors.blue[200],
-            ),
-            Container(
-              height: 110,
-              color: Colors.blue[200],
-            ),
-            Container(
-              height: 110,
-              color: Colors.blue[200],
-            ),
-          ],
-        ),
+      body: Column(
+        // crossAxisAlignment: CrossAxisAlignment.stretch,
+        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // children: <Widget>[
+        //   Container(
+        //     height: 110,
+        //     color: Colors.blue[200],
+        //   ),
+        //   Container(
+        //     height: 110,
+        //     color: Colors.blue[200],
+        //   ),
+        //   Container(
+        //     height: 110,
+        //     color: Colors.blue[200],
+        //   ),
+        //   Container(
+        //     height: 110,
+        //     color: Colors.blue[200],
+        //   ),
+        //   Container(
+        //     height: 110,
+        //     color: Colors.blue[200],
+        //   ),
+        //   Container(
+        //     height: 110,
+        //     color: Colors.blue[200],
+        //   ),
+        children: [
+          ...List.generate(
+              7,
+              (index) => Expanded(
+                      child: Container(
+                    margin: EdgeInsets.only(top: index != 0 ? 10 : 0),
+                    color: Colors.blue[200],
+                  )))
+        ],
       ),
     );
   }

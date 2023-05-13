@@ -33,6 +33,7 @@ class _PageThirdState extends State<PageThird> {
           Container(
             margin: const EdgeInsets.all(10),
             child: FloatingActionButton(
+              heroTag: 'vetrang2',
               backgroundColor: Colors.black87,
               foregroundColor: Colors.blue[200],
               onPressed: () {
@@ -46,6 +47,7 @@ class _PageThirdState extends State<PageThird> {
           Container(
             margin: const EdgeInsets.all(10),
             child: FloatingActionButton(
+              heroTag: 'toitrang4',
               backgroundColor: Colors.black87,
               foregroundColor: Colors.blue[200],
               onPressed: () {

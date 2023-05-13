@@ -34,33 +34,39 @@ class _PageOneState extends State<PageOne> {
         ],
       ),
       backgroundColor: Colors.white,
-      body: Center(
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            Container(
-              height: 100,
-              width: 90,
-              color: Colors.blue[200],
-            ),
-            Container(
-              height: 100,
-              width: 90,
-              color: Colors.blue[200],
-            ),
-            Container(
-              height: 100,
-              width: 90,
-              color: Colors.blue[200],
-            ),
-            Container(
-              height: 100,
-              width: 90,
-              color: Colors.blue[200],
-            )
-          ],
-        ),
+      body: Row(
+        // crossAxisAlignment: CrossAxisAlignment.stretch,
+        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // C1: tao thu cong
+        // children: <Widget>[
+        //   Container(
+        //     height: 100,
+        //     width: 90,
+        //     color: Colors.blue[200],
+        //   ),
+        //   Container(
+        //     height: 100,
+        //     width: 90,
+        //     color: Colors.blue[200],
+        //   ),
+        //   Container(
+        //     height: 100,
+        //     width: 90,
+        //     color: Colors.blue[200],
+        //   ),
+        //   Container(
+        //     height: 100,
+        //     width: 90,
+        //     color: Colors.blue[200],
+        //   )
+        children: List.generate(
+            4,
+            (index) => Expanded(
+                  child: Container(
+                    margin: EdgeInsets.only(left: index != 0 ? 10 : 0),
+                    color: Colors.blue[200],
+                  ),
+                )),
       ),
     );
   }

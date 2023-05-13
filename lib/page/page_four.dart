@@ -21,6 +21,7 @@ class _PageFourState extends State<PageFour> {
           Container(
             margin: const EdgeInsets.all(10),
             child: FloatingActionButton(
+              heroTag: 'vetrangba',
               backgroundColor: Colors.black87,
               foregroundColor: Colors.blue[200],
               onPressed: () {
@@ -34,6 +35,7 @@ class _PageFourState extends State<PageFour> {
           Container(
             margin: const EdgeInsets.all(10),
             child: FloatingActionButton(
+              heroTag: 'toitrangnam',
               backgroundColor: Colors.black87,
               foregroundColor: Colors.blue[200],
               onPressed: () {
@@ -56,37 +58,38 @@ class _PageFourState extends State<PageFour> {
       //   },
       // ),
       backgroundColor: Colors.white,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.zero,
-              height: 512,
-              child: Container(
-                alignment: Alignment.center,
-                color: Colors.blue[200],
-              ),
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            flex: 3,
+            child: Container(
+              color: Colors.blue[200],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Expanded(
+            child: Row(
               children: [
-                Container(
-                  padding: const EdgeInsets.all(100),
-                  height: 185,
-                  width: 200,
-                  color: Colors.blue[200],
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    color: Colors.blue[200],
+                  ),
                 ),
-                Container(
-                  height: 185,
-                  width: 200,
-                  color: Colors.blue[200],
+                SizedBox(
+                  width: 10,
+                ),
+                Expanded(
+                  child: Container(
+                    color: Colors.blue[200],
+                  ),
                 ),
               ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
