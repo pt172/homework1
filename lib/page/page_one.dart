@@ -34,6 +34,7 @@ class _PageOneState extends State<PageOne> {
         ],
       ),
       backgroundColor: Colors.white,
+<<<<<<< HEAD
       body: Row(
         // crossAxisAlignment: CrossAxisAlignment.stretch,
         // mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -67,6 +68,44 @@ class _PageOneState extends State<PageOne> {
                     color: Colors.blue[200],
                   ),
                 )),
+=======
+      body: Center(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            ...List.generate(
+              4,
+              (index) => Expanded(
+                child: Container(
+                  margin: EdgeInsets.only(left: index != 0 ? 10 : 0),
+                  color: Colors.blue,
+                ),
+              ),
+            ),
+            // Container(
+            //   height: 100,
+            //   width: 90,
+            //   color: Colors.blue[200],
+            // ),
+            // Container(
+            //   height: 100,
+            //   width: 90,
+            //   color: Colors.blue[200],
+            // ),
+            // Container(
+            //   height: 100,
+            //   width: 90,
+            //   color: Colors.blue[200],
+            // ),
+            // Container(
+            //   height: 100,
+            //   width: 90,
+            //   color: Colors.blue[200],
+            // )
+          ],
+        ),
+>>>>>>> 02fe6f3d4e3520e7d95bf270005d7a0a05f7d688
       ),
     );
   }

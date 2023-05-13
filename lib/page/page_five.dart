@@ -20,6 +20,7 @@ class _PageFiveState extends State<PageFive> {
           Navigator.pushNamed(context, 'pagesix');
           // Navigator.push(context,
           //     MaterialPageRoute(builder: ((context) => const PageTwo())));
+          Navigator.pushNamed(context, 'pagesix');
         },
         child: const Icon(Icons.play_arrow),
       ),

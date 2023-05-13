@@ -7,6 +7,14 @@ import 'package:homework1/page/page_six.dart';
 import 'package:homework1/page/page_third.dart';
 import 'package:homework1/page/page_two.dart';
 
+/*
+- Còn lỗi "There are multiple heroes that share the same tag within a subtree"
+- UI chưa flexible
+- Khai báo Page name nhưng chưa dùng
+- UI page 3 chưa bọc SafeArea
+- UI page 4 còn lỗi
+*/
+
 void main(List<String> args) {
   runApp(const MyApp());
 }
