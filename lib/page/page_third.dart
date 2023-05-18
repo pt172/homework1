@@ -14,16 +14,16 @@ class _PageThirdState extends State<PageThird> {
     // List<Text> list1 = [
     //   for (int i = 0; i < 9; i++) const Text(""),
     // ];
-    List<Padding> list = List.generate(
-        8,
-        (int index) => Padding(
-              padding: const EdgeInsets.all(0),
-              child: Container(
-                color: Colors.blue[200],
-                height: 80,
-                width: 90,
-              ),
-            ));
+    // List<Padding> list = List.generate(
+    //     8,
+    //     (int index) => Padding(
+    //           padding: const EdgeInsets.all(0),
+    //           child: Container(
+    //             color: Colors.blue[200],
+    //             height: 80,
+    //             width: 90,
+    //           ),
+    //         ));
 
     return Scaffold(
         floatingActionButton: Wrap(

@@ -25,8 +25,7 @@ class _PageOneState extends State<PageOne> {
               foregroundColor: Colors.blue[200],
               onPressed: () {
                 Navigator.pushNamed(context, 'pagetwo');
-                // Navigator.push(context,
-                //     MaterialPageRoute(builder: ((context) => const PageTwo())));
+              
               },
               child: const Icon(Icons.keyboard_arrow_right),
             ),

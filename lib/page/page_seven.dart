@@ -16,7 +16,8 @@ class PageSeven extends StatefulWidget {
 class _PageSevenState extends State<PageSeven> {
   Color textBtn = Colors.black;
   int number = 0;
-  String nameBtn = 'Follow all';
+  String nameBtn = 'Follow ';
+  String nameBtn2='Follow all';
 
   bool followedBtn1 = false;
   bool followedBtn2 = false;
@@ -117,11 +118,11 @@ class _PageSevenState extends State<PageSeven> {
               ),
             ),
           ),
-          SingleChildScrollView(
+          const SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            child: Row(children: const [
+            child: Row(children: [
               AppItem(
-                avatar: 'https://voonze.com/wp-content/uploads/2022/03/fb.jpg',
+                avatar: 'https://img.freepik.com/premium-vector/blue-social-media-logo_197792-1759.jpg',
               ),
               AppItem(
                 avatar:
@@ -147,21 +148,28 @@ class _PageSevenState extends State<PageSeven> {
                 ),
                 InkWell(
                   onTap: () {
-                    if (nameBtn == 'Follow all') {
-                      nameBtn = 'Unfollow all';
+                    if (nameBtn2 == 'Follow all') {
+                      nameBtn2 = 'Unfollow all';
                       number = 5;
                       followedBtn1 = true;
                       followedBtn2 = true;
-                    } else {
-                      nameBtn = 'Follow all';
+                      followedBtn3 = true;
+                      followedBtn4 = true;
+                      followedBtn5 = true;
+                    }
+                    else {
+                      nameBtn2 = 'Follow all';
                       number = 0;
                       followedBtn1 = false;
                       followedBtn2 = false;
+                      followedBtn3 = false;
+                      followedBtn4 = false;
+                      followedBtn5 = false;
                     }
                     setState(() {});
                   },
                   child: Text(
-                    nameBtn,
+                    nameBtn2,
                     style: TextStyle(
                         color: Colors.deepOrange.withOpacity(1), fontSize: 15),
                   ),
@@ -181,8 +189,14 @@ class _PageSevenState extends State<PageSeven> {
                   msg: '2 friends',
                   onPressed: () {
                     followedBtn1 = checkFollowed(followedBtn1);
-                    setState(() {});
-                  },
+                    setState(() {
+                      
+                    });
+                    if( followedBtn1 ){
+                      nameBtn2='Unfollow all';
+                      setState(() {});
+                    }else{nameBtn2='Follow all';
+                    }}
                 ),
                 ChatItem(
                   followed: followedBtn2,
@@ -192,7 +206,11 @@ class _PageSevenState extends State<PageSeven> {
                   msg: '2 friends',
                   onPressed: () {
                     followedBtn2 = checkFollowed(followedBtn2);
-                    setState(() {});
+                    setState(() {});if( followedBtn2 ){
+                      nameBtn2='Unfollow all';
+                      setState(() {});
+                    }else{nameBtn2='Follow all';
+                    }                    
                   },
                 ),
                 ChatItem(
@@ -201,7 +219,15 @@ class _PageSevenState extends State<PageSeven> {
                       'https://static.wikia.nocookie.net/thelastofus/images/2/2f/Part_I_Tommy_infobox.png/revision/latest?cb=20230216035517',
                   name: 'Tommy ',
                   msg: '3 friends',
-                  onPressed: () {},
+                  onPressed: () {
+                    followedBtn3=checkFollowed(followedBtn3);if( followedBtn3 ){
+                      nameBtn2='Unfollow all';
+                      setState(() {});
+                    }else{nameBtn2='Follow all';
+                    }
+                    setState(() {                     
+                    });
+                  },
                 ),
                 ChatItem(
                   followed: followedBtn4,
@@ -209,7 +235,15 @@ class _PageSevenState extends State<PageSeven> {
                       'https://i.pinimg.com/564x/87/6c/bb/876cbb216e1d035c6defb9f9d2bad670.jpg',
                   name: 'Riley Abel ',
                   msg: '2 friends',
-                  onPressed: () {},
+                  onPressed: () {
+                    followedBtn4=checkFollowed(followedBtn4);if( followedBtn4 ){
+                      nameBtn2='Unfollow all';
+                      setState(() {});
+                    }else{nameBtn2='Follow all';
+                    }
+                    setState(() {                    
+                    });
+                  },
                 ),
                 ChatItem(
                   followed: followedBtn5,
@@ -217,7 +251,13 @@ class _PageSevenState extends State<PageSeven> {
                       'https://static.miraheze.org/loathsomecharacterswiki/5/5d/Abby_Anderson.jpg',
                   name: 'Abby ',
                   msg: '2 friends',
-                  onPressed: () {},
+                  onPressed: () {followedBtn5=checkFollowed(followedBtn5);if( followedBtn5 ){
+                      nameBtn2='Unfollow all';
+                      setState(() {});
+                    }else{nameBtn2='Follow all';
+                    }
+                    setState(() {                    
+                    });},
                 ),
               ]),
             ),

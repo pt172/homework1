@@ -29,7 +29,7 @@ class ChatItem extends StatelessWidget {
               child: ClipOval(
                   child: Image(
                 fit: BoxFit.cover,
-                image: NetworkImage(avatar),
+                image: NetworkImage(avatar,scale: 1.0),
               )),
             ),
             Positioned(

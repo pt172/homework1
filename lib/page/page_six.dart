@@ -55,9 +55,9 @@ class _PageSixState extends State<PageSix> {
               color: Colors.black54,
               thickness: 1,
             ),
-            SingleChildScrollView(
+            const SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              child: Row(children: const [
+              child: Row(children:  [
                 AvaItem(
                     avatar:
                         'https://store.playstation.com/store/api/chihiro/00_09_000/container/US/en/99/UP9000-CUSA07820_00-AV00000000000008/0/image?_version=00_09_000&platform=chihiro&bg_color=000000&opacity=100&w=720&h=720',
@@ -85,10 +85,10 @@ class _PageSixState extends State<PageSix> {
               color: Colors.black54,
               thickness: 1,
             ),
-            Expanded(
+            const Expanded(
               child: SingleChildScrollView(
                 scrollDirection: Axis.vertical,
-                child: Column(children: const [
+                child: Column(children: [
                   ChatItem(
                     avatar:
                         'https://store.playstation.com/store/api/chihiro/00_09_000/container/US/en/99/UP9000-CUSA07820_00-AV00000000000008/0/image?_version=00_09_000&platform=chihiro&bg_color=000000&opacity=100&w=720&h=720',
