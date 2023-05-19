@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'package:homework1/page/page_two.dart';
 
+
 import 'package:homework1/widgets/app_item.dart';
 import 'package:homework1/widgets/chat_item2.dart';
 
@@ -66,7 +67,7 @@ class _PageSevenState extends State<PageSeven> {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.only(left: 200),
+                margin: const EdgeInsets.only(left: 180),
                 child: Text(
                   number.toString(),
                   style: const TextStyle(
@@ -122,7 +123,7 @@ class _PageSevenState extends State<PageSeven> {
             scrollDirection: Axis.horizontal,
             child: Row(children: [
               AppItem(
-                avatar: 'https://img.freepik.com/premium-vector/blue-social-media-logo_197792-1759.jpg',
+                avatar: 'https://store-images.s-microsoft.com/image/apps.36178.9007199266245907.2c08d50f-aa6e-458b-b18e-25a315cff11c.d205407d-8b63-406f-8338-0c10a07c0407',
               ),
               AppItem(
                 avatar:

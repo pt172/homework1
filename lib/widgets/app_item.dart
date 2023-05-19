@@ -18,45 +18,42 @@ class _AppItemState extends State<AppItem> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(children: [
-      Column(
-        children: [
-          Container(
-            margin: const EdgeInsets.only(left: 10),
-            height: 140,
-            width: 180,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Image(
-                alignment: Alignment.bottomCenter,
-                fit: BoxFit.cover,
-                image: NetworkImage(
-                    widget.avatar), // sau khi xoa widget no bat them string
-              ),
-            ),
-          ),
-        ],
-      ),
-      Positioned(
-        bottom: 8,
-        left: 65,
-        child: InkWell(
-          child: Text(
-            nameBtn,
-            style:
-                TextStyle(fontSize: 18, color: Colors.white.withOpacity(0.5)),
-          ),
+    return Stack(
+      children: [
+        InkWell(
+          
           onTap: () {
-            if (nameBtn == 'Connect') {
-              nameBtn = 'Connected';
-              setState(() {});
-            } else {
-              nameBtn = 'Connect';
-              setState(() {});
-            }
-          },
+              if (nameBtn == 'Connect') {
+                nameBtn = 'Connected';
+                setState(() {});
+              } else {
+                nameBtn = 'Connect';
+                setState(() {});
+              }
+            },
+          child: Container(
+            width: 180,
+            height: 150,
+            padding: const EdgeInsets.only(bottom: 10),
+            margin: const EdgeInsets.all(5),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(25),
+              image:  DecorationImage(image: NetworkImage(
+                  widget.avatar),
+                  fit: BoxFit.cover),
+            ),
+            child: Align(             
+              alignment: Alignment.bottomCenter,
+              child: Text(
+              nameBtn,
+              style:
+                  TextStyle(fontSize: 18, color: Colors.white.withOpacity(0.5)),
+                      ),
+            ),
+
+          ),
         ),
-      )
-    ]);
+      ],
+    );
   }
 }
